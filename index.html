@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonata Music</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Background video */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            background: linear-gradient(135deg, #ffcc00, #ff6699);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 1.5s infinite;
+        }
+
+        .creator {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #ffcc00;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 0 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 204, 0, 0.6);
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            z-index: 1;
+            position: relative; /* Allow content to overlay */
+            padding-bottom: 100px; /* Add space for footer */
+        }
+
+        section {
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background video -->
+    <video autoplay muted loop id="background-video">
+        <source src="https://cdn.coverr.co/videos/coverr-cruise-ship-animation-7214/1080p.mp4" type="video/mp4">
+        Twoja przeglądarka nie obsługuje wideo.
+    </video>
+
+    <header>
+        <h1>Sonata Music</h1>
+        <p class="creator"><code>WERSJA: 6.3 BETA</code></p>
+    </header>
+
+    <nav>
+        <a href="#zalety">Zalety</a>
+        <a href="#regulamin">Regulamin</a>
+        <a href="#polityka">Polityka Prywatności</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="container">
+        <section id="zalety">
+            <h2>Zalety naszego bota</h2>
+            <p>Nasza aplikacja Discord Bot oferuje szereg zalet, które uczynią Twoje doświadczenia z muzyką na Discordzie jeszcze lepszymi:</p>
+            <ul>
+                <li>Wysoka jakość dźwięku</li>
+                <li>Łatwe sterowanie poprzez komendy</li>
+                <li>Wsparcie dla wielu formatów muzycznych</li>
+                <li>Automatyczne aktualizacje playlisty</li>
+            </ul>
+        </section>
+
+        <section id="regulamin">
+            <h2>Regulamin</h2>
+            <p>Proszę zapoznać się z poniższym regulaminem przed korzystaniem z bota:</p>
+            <ol>
+                <li>Użytkownik zobowiązuje się do przestrzegania zasad społeczności Discord.</li>
+                <li>Bot nie jest odpowiedzialny za treści przesyłane przez użytkowników.</li>
+                <li>Wszelkie próby nadużywania bota mogą prowadzić do zablokowania dostępu.</li>
+            </ol>
+        </section>
+
+        <section id="polityka">
+            <h2>Polityka Prywatności</h2>
+            <p>Twoja prywatność jest dla nas ważna. Poniżej przedstawiamy naszą politykę prywatności:</p>
+            <ul>
+                <li>Nie gromadzimy danych osobowych użytkowników.</li>
+                <li>Informacje o korzystaniu z bota są anonimowe i używane wyłącznie do ulepszania usługi.</li>
+                <li>Wszelkie dane przesyłane do bota są chronione zgodnie z obowiązującymi przepisami.</li>
+            </ul>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Masz pytania lub potrzebujesz pomocy? Skontaktuj się z nami:</p>
+            <ul>
+                <li><a href="https://discord.gg/ERFT5DWQNu" target="_blank">Serwer Support</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sonata Music. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+
+</html>
